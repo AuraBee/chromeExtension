@@ -4,10 +4,8 @@ const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
-
-
-//localStorage.getItem("myLeads") // Gets the leads from the localStorage - PS: JSON.parse()
-const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads") ) // Stores leads - JSON.parse configures into array
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads") ) // Stores leads >> JSON.parse configuring to array
+const tabBtn = document.getElementById("tab-btn")
 
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
@@ -16,7 +14,23 @@ if (leadsFromLocalStorage) {
 }
 
 
-function render(leads) {
+
+tabBtn.addEventListener("click",  function(){
+    //grabs url of current tab
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+
+        myLeads.push(tabs[0].url)
+        localStorage.setItem("myleads", JSON.stringify(myLeads) )
+        render(myLeads)
+    })
+})
+
+
+
+
+
+function render(leads)//paramter set
+ {
     let listItems = ""
     for (let i = 0; i < leads.length; i++) {
         listItems += `
@@ -34,8 +48,8 @@ function render(leads) {
 //listens for a dbl click//
 deleteBtn.addEventListener("dblclick", function() {
     console.log("dbleclicked")
-    localStorage.clear() //clears local storrage
-    myLeads = []  //myleads assigned to empty array
+    localStorage.clear() //clears localstor.
+    myLeads = []  //reassigned to empty array
 
     render(myLeads) //clears the dom
 })
@@ -47,6 +61,6 @@ inputBtn.addEventListener("click", function() {
     localStorage.setItem("myLeads", JSON.stringify(myLeads) )
     //console.log(typeof myLeads)
     render(myLeads)
-    //console.log( localStorage.getItem("myLeads") )
+    
 })
 

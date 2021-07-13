@@ -3,7 +3,7 @@ body {
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     min-width: 400px;
-    background: cornsilk;
+    background: ivory;
 }
 
 input {
@@ -27,8 +27,8 @@ button {
 }
 
 #delete-btn {
-    background: none;
-    color: pink;
+    background: ivory;
+    color: red;
 
 }
 ul {
