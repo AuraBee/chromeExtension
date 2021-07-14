@@ -13,10 +13,8 @@ if (leadsFromLocalStorage) {
     render(myLeads)
 }
 
-
-
 tabBtn.addEventListener("click",  function(){
-    //grabs url of current tab
+    //chrome query method//grabs url of current tab
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 
         myLeads.push(tabs[0].url)
@@ -24,9 +22,6 @@ tabBtn.addEventListener("click",  function(){
         render(myLeads)
     })
 })
-
-
-
 
 
 function render(leads)//paramter set
@@ -45,21 +40,22 @@ function render(leads)//paramter set
 }
 
 
-//listens for a dbl click//
 deleteBtn.addEventListener("dblclick", function() {
     console.log("dbleclicked")
     localStorage.clear() //clears localstor.
-    myLeads = []  //reassigned to empty array
+    myLeads = []  //back to empty array
 
     render(myLeads) //clears the dom
 })
 
 
 inputBtn.addEventListener("click", function() {
+    
     myLeads.push(inputEl.value)
     inputEl.value = ""
     localStorage.setItem("myLeads", JSON.stringify(myLeads) )
     //console.log(typeof myLeads)
+
     render(myLeads)
     
 })

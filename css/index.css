@@ -1,0 +1,83 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 400px;
+  background: rgba(252, 212, 202, 0.5);
+  /*      
+BUTTON STYLING 
+*/
+  /*      
+LIST STYLING 
+*/
+}
+
+body input {
+  width: 100%;
+  padding: .75em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid turquoise;
+  margin-bottom: .75em;
+  background: #fff9e6;
+}
+
+body button {
+  color: ivory;
+  letter-spacing: .1em;
+  padding: .5em 1.5em;
+  margin-right: 1.2em;
+  margin-top: 1em;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+body #input-btn {
+  background: #bbe8c3;
+  border: 2px solid #abd6f7;
+}
+
+body #input-btn:focus, body #input-btn:hover {
+  background: #7bd657;
+  font-weight: bolder;
+  color: #d5f8c9;
+}
+
+body #tab-btn {
+  background: #abd6f7;
+  border: 2px solid #bbe8c3;
+}
+
+body #tab-btn:focus, body #tab-btn:hover {
+  background: #26c6df;
+  color: #d0edf1;
+}
+
+body #delete-btn {
+  background: #cea9e0;
+}
+
+body #delete-btn:focus, body #delete-btn:hover {
+  background: #9568d4;
+  color: #d6bdfa;
+}
+
+body ul {
+  margin-top: 1.2em;
+  list-style: none;
+  padding-left: 0;
+}
+
+body ul li {
+  margin-top: 1.5em;
+}
+
+body ul li a {
+  color: turquoise;
+}
+/*# sourceMappingURL=index.css.map */

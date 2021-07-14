@@ -1,0 +1,98 @@
+
+
+* { 
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 400px;
+    background: hsla(12, 90%, 89%, 0.5);
+
+
+    input {
+        width: 100%;
+        padding: .75em;
+        box-sizing: border-box;
+        border: 1px solid turquoise;
+        margin-bottom: .75em;
+        background: hsl(47, 100%, 95%);
+    }
+
+/*      
+BUTTON STYLING 
+*/
+    button {
+    // background: hsl(131, 49%, 82%);
+    color: ivory;
+    letter-spacing: .1em;
+    padding: .5em 1.5em;
+    margin-right: 1.2em;
+    margin-top: 1em;
+    font-weight: bolder;
+    cursor: pointer;
+    } 
+
+
+
+        #input-btn {
+            background: hsl(131, 49%, 82%);
+            border: 2px solid hsl(206, 82%, 82%);
+
+            &:focus,
+            &:hover {
+                background:hsl(103, 61%, 59%);
+                font-weight: bolder;
+                color: hsl(104, 77%, 88%);
+            }
+        }
+    
+
+        #tab-btn {
+            background: hsl(206, 82%, 82%);
+            border: 2px solid hsl(131, 49%, 82%);
+                    
+                    &:focus,
+                    &:hover 
+                    {
+                        background: hsl(188, 74%, 51%);
+                        color: hsl(187, 53%, 88%);
+                    }
+        }
+
+     
+        #delete-btn {
+            background: hsl(281, 47%, 77%);
+
+                &:focus,
+                &:hover  {
+                    background: hsl(265, 56%, 62%);
+                    color: hsl(265, 86%, 86%);
+                }
+        }
+    // }/*     ends button nesting
+
+/*      
+LIST STYLING 
+*/
+
+        ul {
+            margin-top: 1.2em;
+            list-style: none;
+            padding-left: 0;
+
+            li {
+                margin-top: 1.5em;
+                
+
+                a {
+                    color: turquoise;
+                }
+
+            }
+        }
+
+
+}
